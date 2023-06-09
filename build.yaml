@@ -7,6 +7,10 @@ steps:
     - '-c'
     - |
 
+        # Unit Tests
+        go test
+
+        # Build Artifact
         docker build -t ${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:${TAG_NAME} .
 
 images:
